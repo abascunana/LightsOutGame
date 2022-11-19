@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SharedPreferences prefs = this.getSharedPreferences("prefsKey", Context.MODE_PRIVATE);
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         buttons[4][2] = (Switch) findViewById(R.id.bulb22);
         buttons[4][3] = (Switch) findViewById(R.id.bulb23);
         buttons[4][4] = (Switch) findViewById(R.id.bulb24);
-      randomon();
+       randomon();
 
         if (savedInstanceState != null) {
 
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 if (random == true){
                     limite++;
                 }
+                //Dificultad media, se podrá retocar el límite para dificultad 1-hardcore,2-difícil,3-media,4-fácil
                 if (limite < (buttons.length*buttons[0].length/2)){
                     buttons[i][j].setChecked(random);
                 }
@@ -95,15 +97,27 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    public boolean win(){
+  public boolean win(){
         boolean win = true;
-        for (int i = 0; i < buttons.length; i++) {
-            for (int j = 0; j < buttons[0].length; j++) {
-                   if(buttons[i][j].isChecked() == false){
-                    win = false;
-                   }
+      int i =0;
+      int j =0;
+        while (win){
+
+            while (i<buttons.length-1){
+                j=0;
+                while (j<buttons[0].length-1){
+                    if(buttons[i][j].isChecked() == true){
+                        win = false;
+                    }
+                    j++;
+                }
+                i++;
             }
+            break;
+
+
         }
+
         return win;
     }
     public void changeback(Switch s){
@@ -134,15 +148,9 @@ public class MainActivity extends AppCompatActivity {
         buttons[h][w].setOnClickListener(v ->{
          if ( buttons[h][w].isChecked()) {
 
-             if (win()){
-                 System.out.println("has ganado");
-             }
-             else {
-                 System.out.println("no has ganado");
-             }
-            {
-                //establecer límites para que la app deje de crashear
 
+
+                //establecer límites para que la app deje de crashear
                 surround(w,h);
 
 
@@ -155,11 +163,7 @@ public class MainActivity extends AppCompatActivity {
                         buttons[h][w].setChecked(true);
                         changeback(buttons[h][w]);
                     }
-
-
                 }
-
-             }
 
          } else {
              surround(w,h);
@@ -174,11 +178,16 @@ public class MainActivity extends AppCompatActivity {
                      changeback(buttons[h][w]);
                  }
              }
+            if (win()){
+                System.out.println("has ganado");
+            }
 
          }
 
      });
- }
+
+
+     }
 
 
 
