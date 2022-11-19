@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         buttons[4][2] = (Switch) findViewById(R.id.bulb22);
         buttons[4][3] = (Switch) findViewById(R.id.bulb23);
         buttons[4][4] = (Switch) findViewById(R.id.bulb24);
-       randomon();
+      randomon();
 
         if (savedInstanceState != null) {
 
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-randomon();
+
     }
     public void randomon(){
         //función para empezar el juego con Switches Random encendidos, mejorar luego
@@ -96,14 +96,14 @@ randomon();
 
     }
     public boolean win(){
-        boolean win = false;
+        boolean win = true;
         for (int i = 0; i < buttons.length; i++) {
             for (int j = 0; j < buttons[0].length; j++) {
-                    buttons[i][j].isChecked() ;
+                   if(buttons[i][j].isChecked() == false){
+                    win = false;
+                   }
             }
-
         }
-
         return win;
     }
     public void changeback(Switch s){
@@ -114,35 +114,65 @@ randomon();
             s.setBackgroundResource(R.drawable.squareoff);
         }
     }
+    public void surround(int w, int h){
+        if (w>0){
+            buttons[h][w-1].setChecked(!buttons[h][w-1].isChecked());
+            changeback(buttons[h][w-1]);
+        }
+        if (h>0){
+            buttons[h-1][w].setChecked(!buttons[h-1][w].isChecked());
+            changeback(buttons[h-1][w]);
+        }
+        if (h<buttons.length-1){
+            buttons[h+1][w].setChecked(!buttons[h+1][w].isChecked());
+            changeback(buttons[h+1][w]);
+        }
+    }
 
      public void Vi(int h, int w,Switch[][] buttons){
+
         buttons[h][w].setOnClickListener(v ->{
          if ( buttons[h][w].isChecked()) {
+
+             if (win()){
+                 System.out.println("has ganado");
+             }
+             else {
+                 System.out.println("no has ganado");
+             }
             {
                 //establecer límites para que la app deje de crashear
-                buttons[h][w-1].setChecked(!buttons[h][w-1].isChecked());
-                changeback(buttons[h][w-1]);
-                buttons[h-1][w].setChecked(!buttons[h-1][w].isChecked());
-                changeback(buttons[h-1][w]);
-                buttons[h+1][w].setChecked(!buttons[h+1][w].isChecked());
-                changeback(buttons[h+1][w]);
+
+                surround(w,h);
+
+
                 for (int i = 0; i < 2; i++) {
-                    buttons[h][w+i].setChecked(true);
-                    changeback(buttons[h][w+i]);
+                    if (w < buttons.length-1){
+                        buttons[h][w+i].setChecked(true);
+                        changeback(buttons[h][w+i]);
+                    }
+                    else {
+                        buttons[h][w].setChecked(true);
+                        changeback(buttons[h][w]);
+                    }
+
+
                 }
 
              }
 
          } else {
-             buttons[h][w-1].setChecked(!buttons[h][w-1].isChecked());
-             changeback(buttons[h][w-1]);
-             buttons[h-1][w].setChecked(!buttons[h-1][w].isChecked());
-             changeback(buttons[h-1][w]);
-             buttons[h+1][w].setChecked(!buttons[h+1][w].isChecked());
-             changeback(buttons[h+1][w]);
+             surround(w,h);
+
              for (int i = 0; i < 2; i++) {
-                 buttons[h][w+i].setChecked(false);
-                 changeback(buttons[h][w+i]);
+                 if (w < buttons.length-1) {
+                     buttons[h][w + i].setChecked(false);
+                     changeback(buttons[h][w + i]);
+                 }
+                 else {
+                     buttons[h][w].setChecked(false);
+                     changeback(buttons[h][w]);
+                 }
              }
 
          }
