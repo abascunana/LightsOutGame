@@ -101,20 +101,29 @@ public class MainActivity extends AppCompatActivity {
         boolean win = true;
       int i =0;
       int j =0;
-        while (win){
+      boolean comprobado =false;
+        while (!comprobado){
 
-            while (i<buttons.length-1){
+            while (i<buttons.length-1 && !comprobado){
                 j=0;
-                while (j<buttons[0].length-1){
+                while (j<buttons[0].length-1&& !comprobado){
                     if(buttons[i][j].isChecked() == true){
+
                         win = false;
-                        break;
+                        comprobado = true;
+
                     }
-                    j++;
+                    if (!comprobado){
+                        j++;
+                    }
+
                 }
-                i++;
+                if (!comprobado){
+                    i++;
+                }
+
             }
-            break;
+            comprobado = true;
 
 
         }
@@ -156,14 +165,15 @@ public class MainActivity extends AppCompatActivity {
 
 
                 for (int i = 0; i < 2; i++) {
+
                     if (w < buttons.length-1){
-                        buttons[h][w+i].setChecked(true);
+                        buttons[h][w+i].setChecked(!buttons[h][w+1].isChecked());
                         changeback(buttons[h][w+i]);
                     }
-                    else {
+
                         buttons[h][w].setChecked(true);
                         changeback(buttons[h][w]);
-                    }
+
                 }
 
          } else {
@@ -171,13 +181,13 @@ public class MainActivity extends AppCompatActivity {
 
              for (int i = 0; i < 2; i++) {
                  if (w < buttons.length-1) {
-                     buttons[h][w + i].setChecked(false);
+                     buttons[h][w + i].setChecked(!buttons[h][w+1].isChecked());
                      changeback(buttons[h][w + i]);
                  }
-                 else {
+
                      buttons[h][w].setChecked(false);
                      changeback(buttons[h][w]);
-                 }
+
              }
 
 
