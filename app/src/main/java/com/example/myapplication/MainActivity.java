@@ -18,6 +18,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     int score;
@@ -61,35 +62,89 @@ public class MainActivity extends AppCompatActivity {
         buttons[4][2] = (Switch) findViewById(R.id.bulb22);
         buttons[4][3] = (Switch) findViewById(R.id.bulb23);
         buttons[4][4] = (Switch) findViewById(R.id.bulb24);
+       randomon();
 
         if (savedInstanceState != null) {
 
-            for (int i = 0; i < buttons.length; i++) {
-                for (int j = 0; j < buttons[0].length; j++) {
-                    buttons[i][j].isChecked();
-                }
-            }
         }
-
         for (int i = 0; i < buttons.length; i++) {
             for (int j = 0; j < buttons[0].length; j++) {
-                Vi(buttons[i][j]);
+                Vi(i,j, buttons);
+            }
+
+        }
+
+randomon();
+    }
+    public void randomon(){
+        //función para empezar el juego con Switches Random encendidos, mejorar luego
+        Random r = new Random();
+        int limite=0;
+        for (int i = 0; i < buttons.length; i++) {
+            for (int j = 0; j < buttons[0].length; j++) {
+                boolean random= r.nextBoolean();
+                if (random == true){
+                    limite++;
+                }
+                if (limite < (buttons.length*buttons[0].length/2)){
+                    buttons[i][j].setChecked(random);
+                }
+                changeback(buttons[i][j]);
             }
 
         }
 
     }
+    public boolean win(){
+        boolean win = false;
+        for (int i = 0; i < buttons.length; i++) {
+            for (int j = 0; j < buttons[0].length; j++) {
+                    buttons[i][j].isChecked() ;
+            }
 
-     public void Vi(Switch s){
-        s.setOnClickListener(v ->{
-         if (s.isChecked()) {
-             s.setBackgroundResource(R.drawable.squareon);
-             s.setChecked(true);
+        }
+
+        return win;
+    }
+    public void changeback(Switch s){
+        if (s.isChecked()){
+            s.setBackgroundResource(R.drawable.squareon);
+        }
+        else {
+            s.setBackgroundResource(R.drawable.squareoff);
+        }
+    }
+
+     public void Vi(int h, int w,Switch[][] buttons){
+        buttons[h][w].setOnClickListener(v ->{
+         if ( buttons[h][w].isChecked()) {
+            {
+                //establecer límites para que la app deje de crashear
+                buttons[h][w-1].setChecked(!buttons[h][w-1].isChecked());
+                changeback(buttons[h][w-1]);
+                buttons[h-1][w].setChecked(!buttons[h-1][w].isChecked());
+                changeback(buttons[h-1][w]);
+                buttons[h+1][w].setChecked(!buttons[h+1][w].isChecked());
+                changeback(buttons[h+1][w]);
+                for (int i = 0; i < 2; i++) {
+                    buttons[h][w+i].setChecked(true);
+                    changeback(buttons[h][w+i]);
+                }
+
+             }
 
          } else {
+             buttons[h][w-1].setChecked(!buttons[h][w-1].isChecked());
+             changeback(buttons[h][w-1]);
+             buttons[h-1][w].setChecked(!buttons[h-1][w].isChecked());
+             changeback(buttons[h-1][w]);
+             buttons[h+1][w].setChecked(!buttons[h+1][w].isChecked());
+             changeback(buttons[h+1][w]);
+             for (int i = 0; i < 2; i++) {
+                 buttons[h][w+i].setChecked(false);
+                 changeback(buttons[h][w+i]);
+             }
 
-             s.setBackgroundResource(R.drawable.squareoff);
-             s.setChecked(false);
          }
 
      });

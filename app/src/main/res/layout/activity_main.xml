@@ -85,45 +85,15 @@
 
         <Switch
             android:id="@+id/bulb5"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/squareoff"
-            app:layout_column="4"
-            app:layout_row="1" />
-
-        <Switch
-            android:id="@+id/bulb6"
             android:thumb="@drawable/invisibility"
             android:track="@drawable/invisibility"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/squareoff"
-            app:layout_column="4"
-            app:layout_row="2" />
-
-        <Switch
-            android:id="@+id/bulb7"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/squareoff"
-            app:layout_column="4"
-            app:layout_row="3" />
-
-        <Switch
-            android:id="@+id/bulb8"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
             android:background="@drawable/squareoff"
             app:layout_column="0"
             app:layout_row="1" />
         <Switch
-            android:id="@+id/bulb9"
+            android:id="@+id/bulb6"
             android:thumb="@drawable/invisibility"
             android:track="@drawable/invisibility"
             android:layout_width="50dp"
@@ -132,7 +102,7 @@
             app:layout_column="1"
             app:layout_row="1" />
         <Switch
-            android:id="@+id/bulb10"
+            android:id="@+id/bulb7"
             android:thumb="@drawable/invisibility"
             android:track="@drawable/invisibility"
             android:layout_width="50dp"
@@ -141,7 +111,7 @@
             app:layout_column="2"
             app:layout_row="1" />
         <Switch
-            android:id="@+id/bulb11"
+            android:id="@+id/bulb8"
             android:thumb="@drawable/invisibility"
             android:track="@drawable/invisibility"
             android:layout_width="50dp"
@@ -149,6 +119,35 @@
             android:background="@drawable/squareoff"
             app:layout_column="3"
             app:layout_row="1" />
+
+        <Switch
+            android:id="@+id/bulb9"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/squareoff"
+            app:layout_column="4"
+            app:layout_row="1" />
+
+        <Switch
+            android:id="@+id/bulb10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
+            app:layout_column="0"
+            app:layout_row="2" />
+        <Switch
+            android:id="@+id/bulb11"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
+            app:layout_column="1"
+            app:layout_row="2" />
 
         <Switch
             android:id="@+id/bulb12"
@@ -157,7 +156,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
-            app:layout_column="0"
+            app:layout_column="2"
             app:layout_row="2" />
         <Switch
             android:id="@+id/bulb13"
@@ -166,8 +165,9 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
-            app:layout_column="1"
+            app:layout_column="3"
             app:layout_row="2" />
+
         <Switch
             android:id="@+id/bulb14"
             android:thumb="@drawable/invisibility"
@@ -175,18 +175,18 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
-            app:layout_column="2"
-            app:layout_row="2" />
-        <Switch
-            android:id="@+id/bulb15"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/squareoff"
-            app:layout_column="3"
+            app:layout_column="4"
             app:layout_row="2" />
 
+        <Switch
+            android:id="@+id/bulb15"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
+            android:background="@drawable/squareoff"
+            app:layout_column="0"
+            app:layout_row="3" />
         <Switch
             android:id="@+id/bulb16"
             android:thumb="@drawable/invisibility"
@@ -194,17 +194,16 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
-            app:layout_column="0"
+            app:layout_column="1"
             app:layout_row="3" />
         <Switch
-
-        android:id="@+id/bulb17"
+            android:id="@+id/bulb17"
             android:thumb="@drawable/invisibility"
             android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
-            app:layout_column="1"
+            app:layout_column="2"
             app:layout_row="3" />
         <Switch
             android:id="@+id/bulb18"
@@ -213,8 +212,9 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
-            app:layout_column="2"
+            app:layout_column="3"
             app:layout_row="3" />
+
         <Switch
             android:id="@+id/bulb19"
             android:thumb="@drawable/invisibility"
@@ -222,17 +222,15 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
-            app:layout_column="3"
-            app:layout_row="3"></Switch>
-
-
+            app:layout_column="4"
+            app:layout_row="3" />
 
         <Switch
             android:id="@+id/bulb20"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             android:background="@drawable/squareoff"
             app:layout_column="0"
             app:layout_row="4" />
@@ -262,7 +260,7 @@
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
             app:layout_column="3"
-            app:layout_row="4"></Switch>
+            app:layout_row="4" />
 
         <Switch
             android:id="@+id/bulb24"
@@ -272,9 +270,7 @@
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
             app:layout_column="4"
-            app:layout_row="4"
-            />
-
+            app:layout_row="4" />
 
 
 
