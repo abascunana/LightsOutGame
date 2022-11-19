@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         buttons[4][2] = (Switch) findViewById(R.id.bulb22);
         buttons[4][3] = (Switch) findViewById(R.id.bulb23);
         buttons[4][4] = (Switch) findViewById(R.id.bulb24);
-       randomon();
+      // randomon();
 
         if (savedInstanceState != null) {
 
@@ -178,12 +178,12 @@ public class MainActivity extends AppCompatActivity {
                      changeback(buttons[h][w]);
                  }
              }
+
+
+         }
             if (win()){
                 System.out.println("has ganado");
             }
-
-         }
-
      });
 
 
