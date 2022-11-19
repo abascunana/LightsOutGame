@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         buttons[4][2] = (Switch) findViewById(R.id.bulb22);
         buttons[4][3] = (Switch) findViewById(R.id.bulb23);
         buttons[4][4] = (Switch) findViewById(R.id.bulb24);
-      // randomon();
+        randomon();
 
         if (savedInstanceState != null) {
 
@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 while (j<buttons[0].length-1){
                     if(buttons[i][j].isChecked() == true){
                         win = false;
+                        break;
                     }
                     j++;
                 }
@@ -182,7 +183,9 @@ public class MainActivity extends AppCompatActivity {
 
          }
             if (win()){
-                System.out.println("has ganado");
+                Toast toast = Toast.makeText(this, "Has ganado :DDDDDDDD", Toast.LENGTH_SHORT);
+                toast.show();
+
             }
      });
 
