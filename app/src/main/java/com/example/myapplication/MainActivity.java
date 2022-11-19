@@ -104,9 +104,9 @@ public class MainActivity extends AppCompatActivity {
       boolean comprobado =false;
         while (!comprobado){
 
-            while (i<buttons.length-1 && !comprobado){
+            while (i<buttons.length && !comprobado){
                 j=0;
-                while (j<buttons[0].length-1&& !comprobado){
+                while (j<buttons[0].length&& !comprobado){
                     if(buttons[i][j].isChecked() == true){
 
                         win = false;
