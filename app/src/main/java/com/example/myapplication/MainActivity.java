@@ -74,6 +74,12 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
+        Button button = (Button) findViewById(R.id.randobutton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+               randomon();
+            }
+        });
 
 
     }
