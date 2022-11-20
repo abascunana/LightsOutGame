@@ -5,25 +5,29 @@
     android:id="@+id/constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource">
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="285dp"
-        android:layout_height="76dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/gametitle"
         android:textColor="#776e65"
         android:textSize="50dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="248dp"
-        android:layout_height="254dp"
+        android:layout_width="252dp"
+        android:layout_height="252dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,46 +38,49 @@
             android:id="@+id/bulb0"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:background="@drawable/squareoff"
             android:thumb="@drawable/invisibility"
             android:track="@drawable/invisibility"
-            android:background="@drawable/squareoff"
             app:layout_column="0"
             app:layout_row="0" />
+
         <Switch
             android:id="@+id/bulb1"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="1"
             app:layout_row="0" />
+
         <Switch
             android:id="@+id/bulb2"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="2"
             app:layout_row="0" />
+
         <Switch
             android:id="@+id/bulb3"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="3"
             app:layout_row="0" />
 
         <Switch
             android:id="@+id/bulb4"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="4"
             app:layout_row="0" />
 
@@ -82,46 +89,49 @@
             android:id="@+id/bulb5"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:background="@drawable/squareoff"
             android:thumb="@drawable/invisibility"
             android:track="@drawable/invisibility"
-            android:background="@drawable/squareoff"
             app:layout_column="0"
             app:layout_row="1" />
+
         <Switch
             android:id="@+id/bulb6"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="1"
             app:layout_row="1" />
+
         <Switch
             android:id="@+id/bulb7"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="2"
             app:layout_row="1" />
+
         <Switch
             android:id="@+id/bulb8"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="3"
             app:layout_row="1" />
 
         <Switch
             android:id="@+id/bulb9"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="4"
             app:layout_row="1" />
 
@@ -137,39 +147,41 @@
 
         <Switch
             android:id="@+id/bulb11"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="1"
             app:layout_row="2" />
+
         <Switch
             android:id="@+id/bulb12"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="2"
             app:layout_row="2" />
+
         <Switch
             android:id="@+id/bulb13"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="3"
             app:layout_row="2" />
 
         <Switch
             android:id="@+id/bulb14"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="4"
             app:layout_row="2" />
 
@@ -177,46 +189,49 @@
             android:id="@+id/bulb15"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:background="@drawable/squareoff"
             android:thumb="@drawable/invisibility"
             android:track="@drawable/invisibility"
-            android:background="@drawable/squareoff"
             app:layout_column="0"
             app:layout_row="3" />
+
         <Switch
             android:id="@+id/bulb16"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="1"
             app:layout_row="3" />
+
         <Switch
             android:id="@+id/bulb17"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="2"
             app:layout_row="3" />
+
         <Switch
             android:id="@+id/bulb18"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="3"
             app:layout_row="3" />
 
         <Switch
             android:id="@+id/bulb19"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="4"
             app:layout_row="3" />
 
@@ -224,51 +239,77 @@
             android:id="@+id/bulb20"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:background="@drawable/squareoff"
             android:thumb="@drawable/invisibility"
             android:track="@drawable/invisibility"
-            android:background="@drawable/squareoff"
             app:layout_column="0"
             app:layout_row="4" />
+
         <Switch
             android:id="@+id/bulb21"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="1"
             app:layout_row="4" />
+
         <Switch
             android:id="@+id/bulb22"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="2"
             app:layout_row="4" />
+
         <Switch
             android:id="@+id/bulb23"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="3"
             app:layout_row="4" />
 
         <Switch
             android:id="@+id/bulb24"
-            android:thumb="@drawable/invisibility"
-            android:track="@drawable/invisibility"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/squareoff"
+            android:thumb="@drawable/invisibility"
+            android:track="@drawable/invisibility"
             app:layout_column="4"
             app:layout_row="4" />
 
 
-
     </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/randobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nueva partida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.772"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
